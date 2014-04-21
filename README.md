@@ -1,4 +1,4 @@
-This docker project automatically downloads torrents from RSS feeds and reuploads them to usenet. This project uses rtorrent and <a href="https://github.com/madcowfred/GoPostStuff">GoPostStuff</a>.
+This docker project automatically downloads torrents from RSS feeds and reuploads them to usenet. This project uses rtorrent and <a href="https://github.com/madcowfred/GoPostStuff">GoPostStuff</a>. GoPostStuff has been precompiled for ease of use. 
 
 <h3>Usage</h3>
 
