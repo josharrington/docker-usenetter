@@ -1,4 +1,4 @@
-This docker image automatically downloads torrents from RSS feeds and reuploads them to usenet. 
+This docker image automatically downloads torrents from RSS feeds and reuploads them to usenet. This image uses rtorrent and <a href="https://github.com/madcowfred/GoPostStuff">GoPostStuff</a>.
 
 <h3>Usage</h3>
 
