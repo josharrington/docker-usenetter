@@ -46,12 +46,22 @@ USENET_USERNAME=myusername
 USENET_PASSWORD=mypassword
 USENET_POST_GROUP=alt.binaries.cd.image.linux
 USENET_POST_AS=LinuxUploader
-
 ```
 
-The above example will follow the Ubuntu release RSS feed on Linuxtracker, download the images, and upload them to alt.binaries.cd.image.linux as LinuxUploader.
+The above example will follow the Ubuntu release RSS feed on Linuxtracker, download the images, and upload them to alt.binaries.cd.image.linux as LinuxUploader. Multiple RSS feeds can be used if they are space delimited.
 
 Run a new container:
 ```bash
-docker run -dti --env-file 
+docker run -dti --env-file envVars papersackpuppet/usenetter
 ```
+
+The container will now be running and will soon be picking up torrents. You can attach to the running container to see which torrents are being downloaded or processed. Replace runningContainerId below with the appropriate container ID for usenetter.
+```bash 
+docker ps
+docker attach [runningContainerId]
+```
+
+When you attach, you will see Rtorrent running inside tmux. Standard rtorrent and tmux commands will work. However, if rtorrent is exited, it will need to be restarted. From here, you can open a new pane inside tmux and check log files if necessary.
+
+Usenetter keeps track of which torrents it has downloaded inside finished.pickle. This is a pickle file for a python list containing the urls downloaded. If this is cleared for any reason, usenetter will pick up torrents that have been downloaded previously. Therefore, it is recommended RSS feeds include a date limited feature such as maxage. 
+
