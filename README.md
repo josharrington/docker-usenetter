@@ -61,7 +61,7 @@ docker ps
 docker attach [runningContainerId]
 ```
 
-When you attach, you will see Rtorrent running inside tmux. Standard rtorrent and tmux commands will work. However, if rtorrent is exited, it will need to be restarted. From here, you can open a new pane inside tmux and check log files if necessary.
+When you attach, you will see Rtorrent running inside tmux. Standard rtorrent and tmux commands will work. However, if rtorrent is exited, it will need to be restarted. From here, you can open a new pane inside tmux and check log files if necessary. To exit the attached container but not kill rtorrent, use Ctrl+P & Ctrl+Q.
 
 Usenetter keeps track of which torrents it has downloaded inside finished.pickle. This is a pickle file for a python list containing the urls downloaded. If this is cleared for any reason, usenetter will pick up torrents that have been downloaded previously. Therefore, it is recommended RSS feeds include a date limited feature such as maxage. 
 
