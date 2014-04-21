@@ -23,6 +23,12 @@ addCronJob "0 5 * * * /usr/bin/find /root/logs -mtime +14 -type f -delete"
 addCronJob "0 5 * * * /usr/bin/find /root/watch -mtime +2 -type f -delete"
 addCronJob "0 5 * * * /usr/bin/find /root/uploads -mtime +2 -type f -delete"
 
+# Create directories 
+mkdir /root/logs
+mkdir /root/watch
+mkdir /root/downloads
+mkdir /root/uploads
+
 echo "Starting Cron..."
 cron -f &
 
