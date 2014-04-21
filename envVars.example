@@ -1,0 +1,9 @@
+RSS_FEEDS=http://linuxtracker.org/rss_torrents.php?feed=dl&cat[]=563&pid=00000000000000000000000000000000
+RSS_REFRESH_TIME=3
+USENET_SERVER=news.usenet.com
+USENET_PORT=443
+USENET_TLS=on
+USENET_USERNAME=myusername
+USENET_PASSWORD=mypassword
+USENET_POST_GROUP=alt.binaries.cd.image.linux
+USENET_POST_AS=LinuxUploader
