@@ -67,3 +67,5 @@ When you attach, you will see Rtorrent running inside tmux. Standard rtorrent an
 
 Usenetter keeps track of which torrents it has downloaded inside finished.pickle. This is a pickle file for a python list containing the urls downloaded. If this is cleared for any reason, usenetter will pick up torrents that have been downloaded previously. Therefore, it is recommended RSS feeds include a date limited feature such as maxage. 
 
+When uploading is complete, the files are deleted.
+
